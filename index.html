@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vishnu Irappa Sangammanavar | Computer Science &amp; UI/UX Portfolio</title>
-  <meta name="description" content="Portfolio and Resume of Vishnu Irappa Sangammanavar - B.Tech Computer Science at Vellore Institute of Technology (CGPA 8.91). Full Stack, Deep Learning & UI/UX.">
+  <meta name="description" content="Portfolio and Resume of Vishnu Irappa Sangammanavar - B.Tech Computer Science at Vellore Institute of Technology (CGPA 8.93). Full Stack, Deep Learning & UI/UX.">
   <meta name="keywords" content="Vishnu Irappa Sangammanavar, Vishnu Irappa, Software Developer, UI/UX Designer, Full Stack, Deep Learning, VIT Bhopal, Portfolio, Resume">
   <meta name="author" content="Vishnu Irappa Sangammanavar">
   <meta name="theme-color" content="#09090b">
@@ -22,33 +22,60 @@
   <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
   <div class="ambient-grid" aria-hidden="true"></div>
 
-  <!-- Centered Pill Navigation Bar -->
+  <!-- Centered Floating Magnetic Dock Navigation Bar -->
   <header class="nav-wrapper">
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
-      <div class="nav-pill-container">
-        <a href="#hero" class="nav-item active">Home</a>
-        <a href="#projects" class="nav-item">Projects</a>
-        <a href="https://drive.google.com/file/d/1_9sdO5m68xZ3_D2iXCTDFeuyBRYKdjHx/view?usp=drive_link" target="_blank" rel="noopener noreferrer" id="print-nav-btn" class="nav-item" title="Open Resume in Google Drive">Resume</a>
-        <a href="#analytics" class="nav-item">Analytics</a>
-        <a href="#contact" class="nav-item">Contact</a>
-
-        <a href="#contact" class="nav-badge-star no-print" title="Available for software roles & internships">
-          <span class="star-icon">⭐</span>
-          <span>Open to Work</span>
+      <div class="nav-pill-container" role="menubar">
+        <!-- 1. Home -->
+        <a href="#hero" class="nav-dock-item active" data-tooltip="Home" aria-label="Home">
+          <svg class="dock-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span class="dock-active-dot" aria-hidden="true"></span>
         </a>
 
-        <!-- Right Quick Actions -->
-        <div class="nav-quick-actions">
-          <button id="cmd-k-trigger" class="cmd-trigger-pill no-print" aria-label="Open Command Palette (Ctrl+K)" title="Quick Actions (Ctrl+K)">
-            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            <kbd class="kbd-pill"><span class="cmd-symbol">⌘</span>K</kbd>
-          </button>
+        <!-- 2. Projects -->
+        <a href="#projects" class="nav-dock-item" data-tooltip="Projects" aria-label="Projects">
+          <svg class="dock-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span class="dock-active-dot" aria-hidden="true"></span>
+        </a>
 
-          <button id="theme-toggle" class="theme-toggle-pill no-print" aria-label="Toggle theme" title="Toggle dark/light mode (Hotkey: T)">
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-          </button>
-        </div>
+        <!-- 3. Resume -->
+        <a href="https://drive.google.com/file/d/1_9sdO5m68xZ3_D2iXCTDFeuyBRYKdjHx/view?usp=drive_link" target="_blank" rel="noopener noreferrer" id="print-nav-btn" class="nav-dock-item" data-tooltip="Resume (PDF)" aria-label="Resume">
+          <svg class="dock-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <span class="dock-active-dot" aria-hidden="true"></span>
+        </a>
+
+        <!-- 4. Analytics -->
+        <a href="#analytics" class="nav-dock-item" data-tooltip="Analytics" aria-label="Analytics">
+          <svg class="dock-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span class="dock-active-dot" aria-hidden="true"></span>
+        </a>
+
+        <!-- 5. Contact -->
+        <a href="#contact" class="nav-dock-item" data-tooltip="Contact" aria-label="Contact">
+          <svg class="dock-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class="dock-active-dot" aria-hidden="true"></span>
+        </a>
+
+        <!-- 6. Open to Work -->
+        <a href="#contact" class="nav-dock-item nav-dock-badge no-print" data-tooltip="Open to Work" aria-label="Open to Work" title="Available for software roles & internships">
+          <svg class="dock-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span class="dock-badge-pulse" aria-hidden="true"></span>
+          <span class="dock-active-dot" aria-hidden="true"></span>
+        </a>
+
+        <!-- Divider -->
+        <div class="dock-divider" aria-hidden="true"></div>
+
+        <!-- 7. Quick Search (Cmd+K) -->
+        <button id="cmd-k-trigger" class="nav-dock-item no-print" data-tooltip="Search (⌘K)" aria-label="Open Command Palette (Ctrl+K)">
+          <svg class="dock-icon search-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <!-- 8. Theme Toggle -->
+        <button id="theme-toggle" class="nav-dock-item no-print" data-tooltip="Toggle Theme (T)" aria-label="Toggle theme">
+          <svg class="dock-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="dock-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
       </div>
     </nav>
   </header>
@@ -96,7 +123,7 @@
       <div class="hero-highlights">
         <div class="highlight-item">
           <span class="sparkle-bullet">✦</span>
-          <span>B.Tech in Computer Science student at <strong>Vellore Institute of Technology</strong> (CGPA: <strong>8.91</strong> / 10.0).</span>
+          <span>B.Tech in Computer Science student at <strong>Vellore Institute of Technology</strong> (CGPA: <strong>8.93</strong> / 10.0).</span>
         </div>
         <div class="highlight-item">
           <span class="sparkle-bullet">✦</span>
@@ -174,7 +201,7 @@
     <!-- [ My Skills ] Section (From Actual Resume + UI/UX) -->
     <section class="section reveal-on-scroll" id="skills" aria-labelledby="skills-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="skills-heading"><span class="bracket">[</span> Technical &amp; UI/UX Skills <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="skills-heading">Technical &amp; UI/UX Skills</h2>
       </div>
 
       <div class="skills-categorized-grid">
@@ -261,7 +288,7 @@
     <!-- [ My Projects ] Section (Exact Projects from Resume) -->
     <section class="section reveal-on-scroll" id="projects" aria-labelledby="projects-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="projects-heading"><span class="bracket">[</span> Featured Projects <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="projects-heading">Featured Projects</h2>
       </div>
 
       <div class="project-showcase-list">
@@ -469,7 +496,7 @@
     <!-- [ Work Experience ] Section -->
     <section class="section reveal-on-scroll" id="experience" aria-labelledby="experience-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="experience-heading"><span class="bracket">[</span> Experience <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="experience-heading">Experience</h2>
       </div>
 
       <div class="experience-card-list">
@@ -539,7 +566,7 @@
     <!-- [ Education ] Section (From Actual Resume) -->
     <section class="section reveal-on-scroll" id="education" aria-labelledby="education-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="education-heading"><span class="bracket">[</span> Education <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="education-heading">Education</h2>
       </div>
 
       <div class="card education-card spotlight-card">
@@ -567,7 +594,7 @@
     <!-- [ Certifications ] Section (From Actual Resume) -->
     <section class="section reveal-on-scroll" id="certifications" aria-labelledby="certifications-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="certifications-heading"><span class="bracket">[</span> Certifications <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="certifications-heading">Certifications</h2>
       </div>
 
       <div class="certifications-grid">
@@ -636,7 +663,7 @@
     <!-- [ Extracurriculars & Leadership ] Section (From Actual Resume) -->
     <section class="section reveal-on-scroll" id="extracurriculars" aria-labelledby="leadership-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="leadership-heading"><span class="bracket">[</span> Leadership &amp; Volunteering <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="leadership-heading">Leadership &amp; Volunteering</h2>
       </div>
 
       <div class="card extracurricular-card spotlight-card">
@@ -663,7 +690,7 @@
     <!-- [ /uses ] Section -->
     <section class="section reveal-on-scroll" id="uses" aria-labelledby="uses-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="uses-heading"><span class="bracket">[</span> /uses <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="uses-heading">Uses</h2>
       </div>
 
       <div class="uses-callout-card spotlight-card">
@@ -680,7 +707,7 @@
     <!-- [ /analytics ] Section -->
     <section class="section reveal-on-scroll" id="analytics" aria-labelledby="analytics-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="analytics-heading"><span class="bracket">[</span> /analytics <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="analytics-heading">Analytics</h2>
       </div>
 
       <!-- Metric Stat Cards -->
@@ -803,7 +830,7 @@
     <!-- [ Let's Connect ] Section -->
     <section class="section reveal-on-scroll" id="contact" aria-labelledby="contact-heading">
       <div class="bracket-section-header">
-        <h2 class="bracket-title" id="contact-heading"><span class="bracket">[</span> Let's Connect <span class="bracket">]</span></h2>
+        <h2 class="section-title" id="contact-heading">Let's Connect</h2>
       </div>
 
       <div class="connect-sub-text">
@@ -957,7 +984,7 @@
         </div>
         <div class="cmd-item" role="option" data-action="navigate" data-target="#education">
           <svg class="cmd-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          <span class="cmd-item-text">Education (VIT Bhopal CGPA 8.91)</span>
+          <span class="cmd-item-text">Education (VIT Bhopal CGPA 8.93)</span>
           <span class="cmd-item-shortcut">Jump</span>
         </div>
         <div class="cmd-item" role="option" data-action="navigate" data-target="#certifications">

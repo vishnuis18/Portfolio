@@ -680,4 +680,86 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     revealElements.forEach((el) => el.classList.add('is-revealed'));
   }
+
+  // =========================================================================
+  // 11. Magnetic Dock Magnification & Scrollspy Active States
+  // ===========================================================================================
+  function initMagneticDock() {
+    const navContainer = document.querySelector('.nav-pill-container');
+    if (!navContainer) return;
+
+    const dockItems = navContainer.querySelectorAll('.nav-dock-item');
+    const sections = document.querySelectorAll('main section[id], header#hero');
+
+    // Magnetic Proximity Distance Magnification Physics
+    const maxScale = 1.38;
+    const maxTranslateY = -5; // px upward lift
+    const influenceRadius = 70; // px proximity radius
+
+    navContainer.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+
+      dockItems.forEach((item) => {
+        const itemRect = item.getBoundingClientRect();
+        const itemCenterX = itemRect.left + itemRect.width / 2;
+        const distance = Math.abs(mouseX - itemCenterX);
+
+        if (distance < influenceRadius) {
+          const proximity = Math.cos((distance / influenceRadius) * (Math.PI / 2));
+          const scale = 1 + (maxScale - 1) * Math.pow(proximity, 2);
+          const translateY = maxTranslateY * Math.pow(proximity, 2);
+
+          item.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+        } else {
+          item.style.transform = 'scale(1) translateY(0px)';
+        }
+      });
+    });
+
+    // Reset items to standard size when mouse leaves the dock
+    navContainer.addEventListener('mouseleave', () => {
+      dockItems.forEach((item) => {
+        item.style.transform = 'scale(1) translateY(0px)';
+      });
+    });
+
+    // ScrollSpy to update active state dot as user scrolls
+    function updateScrollSpy() {
+      const scrollY = window.scrollY + 120;
+      let currentSectionId = '';
+
+      sections.forEach((sec) => {
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        if (scrollY >= top && scrollY < top + height) {
+          currentSectionId = sec.getAttribute('id');
+        }
+      });
+
+      if (currentSectionId) {
+        dockItems.forEach((item) => {
+          const href = item.getAttribute('href');
+          if (href && href === `#${currentSectionId}`) {
+            dockItems.forEach((d) => d.classList.remove('active'));
+            item.classList.add('active');
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateScrollSpy, { passive: true });
+    updateScrollSpy();
+
+    dockItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const href = item.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          dockItems.forEach((d) => d.classList.remove('active'));
+          item.classList.add('active');
+        }
+      });
+    });
+  }
+
+  initMagneticDock();
 });
