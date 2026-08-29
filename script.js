@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (activityGrid) {
     const totalWeeks = 52;
     const daysPerWeek = 7;
-    const months = ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May'];
+    const months = ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'];
     
     for (let w = 0; w < totalWeeks; w++) {
       for (let d = 0; d < daysPerWeek; d++) {
@@ -120,16 +120,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const progress = w / totalWeeks;
         const rand = Math.random();
 
-        if (progress > 0.15 && progress < 0.85) {
-          if (rand > 0.78) lvl = 4;
-          else if (rand > 0.55) lvl = 3;
-          else if (rand > 0.35) lvl = 2;
-          else if (rand > 0.18) lvl = 1;
+        if (progress < 0.8) {
+          // Sparse period (Aug to May)
+          if (rand > 0.98) lvl = 4;
+          else if (rand > 0.95) lvl = 3;
+          else if (rand > 0.90) lvl = 2;
+          else if (rand > 0.85) lvl = 1;
           else lvl = 0;
         } else {
-          if (rand > 0.85) lvl = 3;
-          else if (rand > 0.65) lvl = 2;
-          else if (rand > 0.4) lvl = 1;
+          // Dense period (Jun to Aug)
+          if (rand > 0.85) lvl = 4;
+          else if (rand > 0.60) lvl = 3;
+          else if (rand > 0.35) lvl = 2;
+          else if (rand > 0.15) lvl = 1;
           else lvl = 0;
         }
 
