@@ -1041,6 +1041,166 @@ body {
 }
 .dash-table-line.w-70 { width: 70%; background: #3b82f6; }
 
+/* Defense Command Dashboard Mockup */
+.mockup-command-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.command-nav-chips {
+  display: flex;
+  gap: 3px;
+  overflow: hidden;
+}
+.cmd-nav-block {
+  height: 3px;
+  flex: 1;
+  background: #27272a;
+  border-radius: 1px;
+}
+.cmd-nav-block.active {
+  background: #22c55e;
+  box-shadow: 0 0 5px rgba(34, 197, 94, 0.4);
+}
+.command-panels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.cmd-panel-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xs);
+  padding: 3px 5px;
+  display: flex;
+  flex-direction: column;
+}
+.cmd-panel-box .panel-val {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+.cmd-panel-box .panel-val.green { color: #4ade80; }
+.cmd-panel-box .panel-lbl {
+  font-size: 0.46rem;
+  color: var(--text-muted);
+}
+.command-chart-sparkline {
+  height: 18px;
+  width: 100%;
+}
+
+/* Gramin Seva Complaint Lifecycle Mockup */
+.mockup-rural-board {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rural-stages-row {
+  display: flex;
+  gap: 4px;
+}
+.stage-pill {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 3px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.stage-pill .s-count {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+}
+.stage-pill .s-name {
+  font-size: 0.44rem;
+  color: var(--text-muted);
+}
+.stage-pill.pending .s-count { color: #f59e0b; }
+.stage-pill.progress .s-count { color: #38bdf8; }
+.stage-pill.resolved .s-count { color: #4ade80; }
+.rural-role-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.role-pill {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  color: var(--text-muted);
+  background: var(--bg-pill);
+  border: 1px solid var(--border-subtle);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+}
+.bandwidth-indicator {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  color: #22c55e;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* YBT Digital Marketplace Mockup */
+.mockup-marketplace {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.marketplace-item-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xs);
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.market-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.market-name {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.market-tagline {
+  font-size: 0.46rem;
+  color: var(--text-muted);
+}
+.market-price-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+}
+.gateway-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.gateway-tag {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  padding: 1px 4px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-subtle);
+}
+.gateway-tag.stripe { color: #6366f1; border-color: rgba(99, 102, 241, 0.3); background: rgba(99, 102, 241, 0.08); }
+.gateway-tag.razorpay { color: #3b82f6; border-color: rgba(59, 130, 246, 0.3); background: rgba(59, 130, 246, 0.08); }
+.gateway-tag.theme-pill { color: #eab308; border-color: rgba(234, 179, 8, 0.3); background: rgba(234, 179, 8, 0.08); }
+
 /* Project Details on Right */
 .project-details {
   display: flex;
@@ -1508,6 +1668,113 @@ body {
   font-size: 0.74rem;
   color: var(--text-muted);
   line-height: 1.35;
+}
+
+.cert-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #60a5fa;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: all var(--transition-fast);
+}
+
+.cert-link-btn:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Achievements Section (Competitive Programming & Problem Solving)
+   ========================================================================== */
+
+.achievement-card {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achievement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.achievement-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.achievement-icon-pill {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  color: #eab308;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.achievement-headline {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.achievement-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.achievement-stat-badge {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.achievement-body {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.achievement-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.topic-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: var(--bg-pill);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+}
+
+.topic-tag.highlight {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.06);
 }
 
 /* ==========================================================================

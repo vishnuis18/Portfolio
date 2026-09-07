@@ -354,53 +354,65 @@ document.addEventListener('DOMContentLoaded', () => {
   const csButtons = document.querySelectorAll('.open-case-study');
 
   const projectCaseStudies = {
-    skindisease: {
-      title: 'Skin Disease Detector — Deep Learning & Computer Vision',
-      badge: 'Deep Learning (93.5% Accuracy)',
+    defensedashboard: {
+      title: 'Defense Command Dashboard — Command-Center Layout & Telemetry',
+      badge: 'React.js & Chart.js (Apr 2026)',
       content: `
         <div class="cs-content">
-          <p class="cs-lead">An advanced medical image diagnostic system leveraging transfer learning on dermatological imagery to deliver high-confidence disease detection.</p>
+          <p class="cs-lead">A high-density command-center web portal engineered with real-time data visualization panels and adaptable tactical layouts for operational status tracking and system monitoring.</p>
           <div class="cs-section">
-            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Architecture &amp; Methodology</h4>
-            <p style="color:#a1a1aa; font-size:0.86rem;">Fine-tuned a pre-trained <strong>EfficientNet-B0</strong> neural network on the benchmark <strong>HAM10000 dataset</strong>. Designed robust image preprocessing, data augmentation, and normalization pipelines in PyTorch.</p>
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Architecture &amp; Command-Center Layout</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Designed a dashboard-style web portal featuring <strong>7 navigation sections</strong> and <strong>4 data visualization panels</strong>, exploring command-center-inspired layouts for status tracking and system monitoring.</p>
           </div>
           <div class="cs-section" style="margin-top:12px;">
-            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Key Results &amp; Validation</h4>
-            <p style="color:#a1a1aa; font-size:0.86rem;">Achieved <strong>93.5% classification accuracy</strong> on the test partition. Thoroughly evaluated with confusion matrices and precision/recall classification reports to minimize false negatives in dermatological diagnosis.</p>
-          </div>
-        </div>
-      `
-    },
-    ikshana: {
-      title: 'Ikshana — Multimodal Speech & Gemini-2.5 Visual AI',
-      badge: 'NLP & Multimodal AI',
-      content: `
-        <div class="cs-content">
-          <p class="cs-lead">End-to-end multimodal pipeline combining real-time optical character recognition, Google Gemini visual reasoning, and natural voice request-response workflows.</p>
-          <div class="cs-section">
-            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Core Pipeline</h4>
-            <p style="color:#a1a1aa; font-size:0.86rem;">Engineered seamless Speech-to-Text (STT) and Text-to-Speech (TTS) interaction loops with Google Gemini API for high-level image feature extraction and contextual captioning.</p>
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Reusable Components &amp; Adaptability</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Developed reusable <strong>React components</strong> integrated with <strong>Chart.js</strong> to power intuitive navigation, theme switching, and a layout that smoothly adapts across diverse screen sizes.</p>
           </div>
           <div class="cs-section" style="margin-top:12px;">
-            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Visual &amp; Voice Synthesis</h4>
-            <p style="color:#a1a1aa; font-size:0.86rem;">Integrated Tesseract OCR with OpenCV computer vision pre-processing to extract textual data from camera streams and produce real-time audio responses with gTTS.</p>
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Military-Inspired Theming &amp; UI</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Crafted a military-inspired interface with custom CSS themes, ensuring critical dashboard metrics and telemetry signals are effortless to scan at a glance.</p>
           </div>
         </div>
       `
     },
     graminseva: {
-      title: 'Gramin Seva — Civic Complaint Management Platform',
-      badge: 'Full Stack & UI/UX',
+      title: 'Gramin Seva — Complaint Management System',
+      badge: 'React.js & MongoDB (Feb 2026)',
       content: `
         <div class="cs-content">
-          <p class="cs-lead">A comprehensive, minimalistic civic issue reporting and resolution platform engineered for rural administrative efficiency across India.</p>
+          <p class="cs-lead">A full-stack civic complaint platform built specifically for rural communities to streamline issue reporting, governance tracking, and rapid administrative resolution.</p>
           <div class="cs-section">
-            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ System Architecture &amp; UI</h4>
-            <p style="color:#a1a1aa; font-size:0.86rem;">Constructed with a modern React.js frontend, Tailwind CSS responsive layouts, and a scalable Node.js/Express.js backend backed by MongoDB.</p>
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Multi-Role Lifecycle Management</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Built a complaint platform for rural communities, supporting <strong>2 user roles</strong> across submission, tracking, and administration, with a structured 3-stage lifecycle: <strong>Pending, In Progress, Resolved</strong>.</p>
           </div>
           <div class="cs-section" style="margin-top:12px;">
-            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Role-Based Features</h4>
-            <p style="color:#a1a1aa; font-size:0.86rem;">Implemented secure Admin/User authentication, real-time lifecycle tracking (<em>Pending / In Progress / Resolved</em>), and live dashboard monitoring metrics.</p>
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ RBAC &amp; Scalable REST APIs</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Engineered robust <strong>CRUD APIs</strong> with role-based access control (RBAC), seamlessly connecting the React frontend to <strong>MongoDB</strong> to store and securely manage complaint records.</p>
+          </div>
+          <div class="cs-section" style="margin-top:12px;">
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Low-Bandwidth Optimization</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Optimized the entire interface with <strong>Tailwind CSS</strong> to deliver an ultra-streamlined, low-bandwidth-friendly experience tailored for rural network environments.</p>
+          </div>
+        </div>
+      `
+    },
+    ybtdigital: {
+      title: 'YBT Digital — Digital Product Marketplace',
+      badge: 'Next.js, TypeScript & Payments (May 2026)',
+      content: `
+        <div class="cs-content">
+          <p class="cs-lead">An enterprise-grade, full-stack digital product marketplace architected with Next.js, TypeScript, and multi-gateway payment processing.</p>
+          <div class="cs-section">
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Modular Marketplace Architecture</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Architected a full-stack digital marketplace integrating <strong>10+ core modules</strong>, including product discovery, search and filtering, cart, coupons, checkout, payments, orders, invoices, and secure downloads.</p>
+          </div>
+          <div class="cs-section" style="margin-top:12px;">
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Role-Based Admin &amp; Data Models</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Established a role-based admin system supporting <strong>3 user roles</strong> with <strong>10+ database models</strong> (MongoDB/Mongoose) for managing products, users, orders, coupons, support, FAQs, settings, and sales analytics.</p>
+          </div>
+          <div class="cs-section" style="margin-top:12px;">
+            <h4 style="color:#f4f4f5; margin-bottom:6px;">✦ Payment Gateways &amp; Dual Themes</h4>
+            <p style="color:#a1a1aa; font-size:0.86rem;">Implemented <strong>3 payment gateways</strong> (including Razorpay and Stripe), secure authentication, and <strong>2 UI themes</strong> with responsive, mobile-first design using Next.js and Tailwind CSS.</p>
           </div>
         </div>
       `
@@ -504,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Print / View Resume shortcut ('P' when no inputs are focused)
     if (e.key.toLowerCase() === 'p' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
       e.preventDefault();
-      window.open('https://drive.google.com/file/d/1_9sdO5m68xZ3_D2iXCTDFeuyBRYKdjHx/view?usp=drive_link', '_blank', 'noopener,noreferrer');
+      window.open('https://drive.google.com/file/d/1H_tA4dpXtifIm5RCT636yzcjDgoBYSZv/view?usp=drive_link', '_blank', 'noopener,noreferrer');
     }
 
     // Command palette arrow navigation
@@ -577,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (action === 'open-uses') {
       openUses();
     } else if (action === 'print-resume') {
-      window.open('https://drive.google.com/file/d/1_9sdO5m68xZ3_D2iXCTDFeuyBRYKdjHx/view?usp=drive_link', '_blank', 'noopener,noreferrer');
+      window.open('https://drive.google.com/file/d/1H_tA4dpXtifIm5RCT636yzcjDgoBYSZv/view?usp=drive_link', '_blank', 'noopener,noreferrer');
     } else if (action === 'copy-email') {
       copyText('vishnuirappasangammanavar@gmail.com');
     } else if (action === 'copy-phone') {
