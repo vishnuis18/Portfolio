@@ -308,30 +308,6 @@ body {
   pointer-events: none;
 }
 
-/* Active Dot Indicator Underneath Active Item */
-.dock-active-dot {
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #ffffff;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 0 6px #ffffff;
-}
-
-[data-theme="light"] .dock-active-dot {
-  background: #09090b;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-.nav-dock-item.active .dock-active-dot {
-  opacity: 1;
-}
 
 /* Prominent Floating Hover Tooltip (Word Label below icon) */
 .nav-dock-item[data-tooltip]::before {
