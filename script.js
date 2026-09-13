@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Print / View Resume shortcut ('P' when no inputs are focused)
     if (e.key.toLowerCase() === 'p' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
       e.preventDefault();
-      window.open('https://drive.google.com/file/d/1H_tA4dpXtifIm5RCT636yzcjDgoBYSZv/view?usp=drive_link', '_blank', 'noopener,noreferrer');
+      window.open('https://drive.google.com/file/d/13nfQXXmiuGYvqBxob7_u--vf4A2ZA8x9/view?usp=drive_link', '_blank', 'noopener,noreferrer');
     }
 
     // Command palette arrow navigation
@@ -589,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (action === 'open-uses') {
       openUses();
     } else if (action === 'print-resume') {
-      window.open('https://drive.google.com/file/d/1H_tA4dpXtifIm5RCT636yzcjDgoBYSZv/view?usp=drive_link', '_blank', 'noopener,noreferrer');
+      window.open('https://drive.google.com/file/d/13nfQXXmiuGYvqBxob7_u--vf4A2ZA8x9/view?usp=drive_link', '_blank', 'noopener,noreferrer');
     } else if (action === 'copy-email') {
       copyText('vishnuirappasangammanavar@gmail.com');
     } else if (action === 'copy-phone') {
