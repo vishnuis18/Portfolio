@@ -867,6 +867,18 @@ body {
   background: #3f3f46;
 }
 
+.project-mockup-frame.has-img,
+.project-mockup-frame:has(.project-mockup-img) {
+  height: auto;
+}
+
+.project-mockup-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .mockup-content {
   flex: 1;
   padding: 8px;
@@ -2461,6 +2473,11 @@ body {
 
   .project-mockup-frame {
     height: 135px;
+  }
+
+  .project-mockup-frame.has-img,
+  .project-mockup-frame:has(.project-mockup-img) {
+    height: auto;
   }
 
   .connect-pills-grid {
